@@ -25,4 +25,4 @@ python analysis/evaluate_iqa_ssc_trajectory_detector.py --help
 
 Use the metadata in `CITATION.cff`. The code and derived outputs are released under the MIT License. The source dataset remains subject to its provider's terms and is not covered by this repository license.
 
-Release version: `v0.1.1`.
+Release version: `v0.1.2`.
