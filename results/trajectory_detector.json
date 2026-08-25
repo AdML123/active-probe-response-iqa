@@ -1,0 +1,513 @@
+{
+  "schema_version": "iqa_ssc_trajectory_detector_report_v1",
+  "status": "computed",
+  "row_count": 7500,
+  "usable_rows": 7500,
+  "feature_dim": 12,
+  "calibration_images": 250,
+  "evaluation_images": 250,
+  "bootstrap_resamples": 2000,
+  "bootstrap_seeds": {
+    "full": 20260824,
+    "severe": 20260825,
+    "mild": 20260826
+  },
+  "feature_order": [
+    "GOC_JPEG_first",
+    "GOC_JPEG_last",
+    "GOC_JPEG_area",
+    "GOC_blur_first",
+    "GOC_blur_last",
+    "GOC_blur_area",
+    "S_grid_JPEG_first",
+    "S_grid_JPEG_last",
+    "S_grid_JPEG_area",
+    "S_grid_blur_first",
+    "S_grid_blur_last",
+    "S_grid_blur_area"
+  ],
+  "validity": {
+    "bilateral": {
+      "valid": 2500,
+      "total": 2500,
+      "coverage": 1.0
+    },
+    "jpeg": {
+      "valid": 2500,
+      "total": 2500,
+      "coverage": 1.0
+    },
+    "gaussian_blur": {
+      "valid": 2500,
+      "total": 2500,
+      "coverage": 1.0
+    }
+  },
+  "evaluation_validity": {
+    "bilateral": {
+      "valid": 1250,
+      "total": 1250,
+      "coverage": 1.0
+    },
+    "jpeg": {
+      "valid": 1250,
+      "total": 1250,
+      "coverage": 1.0
+    },
+    "gaussian_blur": {
+      "valid": 1250,
+      "total": 1250,
+      "coverage": 1.0
+    }
+  },
+  "comparisons": {
+    "bilateral_vs_jpeg": {
+      "feature_set": "full_12",
+      "regularization": 0.0010000000000000009,
+      "strata": {
+        "full": {
+          "positive_count": 1250,
+          "negative_count": 1250,
+          "auc": 0.99611136,
+          "auc_ci95": [
+            0.9946251679999999,
+            0.997433776
+          ],
+          "full_gate": true
+        },
+        "severe": {
+          "positive_count": 500,
+          "negative_count": 500,
+          "auc": 0.999912,
+          "auc_ci95": [
+            0.99976,
+            0.999996
+          ],
+          "full_gate": true
+        },
+        "mild": {
+          "positive_count": 500,
+          "negative_count": 500,
+          "auc": 0.983732,
+          "auc_ci95": [
+            0.9764999000000001,
+            0.989752
+          ],
+          "full_gate": true
+        }
+      },
+      "primary_gate": true
+    },
+    "bilateral_vs_blur": {
+      "feature_set": "full_12",
+      "regularization": 0.001000000000000004,
+      "strata": {
+        "full": {
+          "positive_count": 1250,
+          "negative_count": 1250,
+          "auc": 0.96518144,
+          "auc_ci95": [
+            0.958234112,
+            0.971507456
+          ],
+          "full_gate": true
+        },
+        "severe": {
+          "positive_count": 500,
+          "negative_count": 500,
+          "auc": 0.999568,
+          "auc_ci95": [
+            0.998944,
+            0.999952
+          ],
+          "full_gate": true
+        },
+        "mild": {
+          "positive_count": 500,
+          "negative_count": 500,
+          "auc": 0.945728,
+          "auc_ci95": [
+            0.932396,
+            0.9582328999999999
+          ],
+          "full_gate": true
+        }
+      },
+      "primary_gate": true
+    }
+  },
+  "ablations": {
+    "jpeg_probe_6": {
+      "bilateral_vs_jpeg": {
+        "feature_set": "jpeg_probe_6",
+        "regularization": 0.001000000000000001,
+        "strata": {
+          "full": {
+            "positive_count": 1250,
+            "negative_count": 1250,
+            "auc": 0.99111168,
+            "auc_ci95": [
+              0.98815152,
+              0.99374976
+            ],
+            "full_gate": true
+          },
+          "severe": {
+            "positive_count": 500,
+            "negative_count": 500,
+            "auc": 0.99946,
+            "auc_ci95": [
+              0.9988719,
+              0.9999041
+            ],
+            "full_gate": true
+          },
+          "mild": {
+            "positive_count": 500,
+            "negative_count": 500,
+            "auc": 0.968564,
+            "auc_ci95": [
+              0.9565902,
+              0.9792985000000001
+            ],
+            "full_gate": true
+          }
+        }
+      },
+      "bilateral_vs_blur": {
+        "feature_set": "jpeg_probe_6",
+        "regularization": 0.0010000000000000022,
+        "strata": {
+          "full": {
+            "positive_count": 1250,
+            "negative_count": 1250,
+            "auc": 0.91093376,
+            "auc_ci95": [
+              0.8993825280000001,
+              0.921505424
+            ],
+            "full_gate": true
+          },
+          "severe": {
+            "positive_count": 500,
+            "negative_count": 500,
+            "auc": 0.915272,
+            "auc_ci95": [
+              0.8982528000000001,
+              0.931052
+            ],
+            "full_gate": true
+          },
+          "mild": {
+            "positive_count": 500,
+            "negative_count": 500,
+            "auc": 0.88872,
+            "auc_ci95": [
+              0.8674555,
+              0.9092223
+            ],
+            "full_gate": true
+          }
+        }
+      }
+    },
+    "blur_probe_6": {
+      "bilateral_vs_jpeg": {
+        "feature_set": "blur_probe_6",
+        "regularization": 0.0010000000000000007,
+        "strata": {
+          "full": {
+            "positive_count": 1250,
+            "negative_count": 1250,
+            "auc": 0.91748864,
+            "auc_ci95": [
+              0.906509664,
+              0.9278095359999999
+            ],
+            "full_gate": true
+          },
+          "severe": {
+            "positive_count": 500,
+            "negative_count": 500,
+            "auc": 0.980956,
+            "auc_ci95": [
+              0.9736114,
+              0.9875002
+            ],
+            "full_gate": true
+          },
+          "mild": {
+            "positive_count": 500,
+            "negative_count": 500,
+            "auc": 0.810128,
+            "auc_ci95": [
+              0.7835195,
+              0.8361793
+            ],
+            "full_gate": true
+          }
+        }
+      },
+      "bilateral_vs_blur": {
+        "feature_set": "blur_probe_6",
+        "regularization": 0.0010000000000000052,
+        "strata": {
+          "full": {
+            "positive_count": 1250,
+            "negative_count": 1250,
+            "auc": 0.93333376,
+            "auc_ci95": [
+              0.923718896,
+              0.942642416
+            ],
+            "full_gate": true
+          },
+          "severe": {
+            "positive_count": 500,
+            "negative_count": 500,
+            "auc": 0.999628,
+            "auc_ci95": [
+              0.9989758,
+              0.999968
+            ],
+            "full_gate": true
+          },
+          "mild": {
+            "positive_count": 500,
+            "negative_count": 500,
+            "auc": 0.9076,
+            "auc_ci95": [
+              0.8899315,
+              0.9238006999999999
+            ],
+            "full_gate": true
+          }
+        }
+      }
+    },
+    "goc_only_6": {
+      "bilateral_vs_jpeg": {
+        "feature_set": "goc_only_6",
+        "regularization": 0.001,
+        "strata": {
+          "full": {
+            "positive_count": 1250,
+            "negative_count": 1250,
+            "auc": 0.98775424,
+            "auc_ci95": [
+              0.984269472,
+              0.990794704
+            ],
+            "full_gate": true
+          },
+          "severe": {
+            "positive_count": 500,
+            "negative_count": 500,
+            "auc": 0.997692,
+            "auc_ci95": [
+              0.9953759000000001,
+              0.9992722
+            ],
+            "full_gate": true
+          },
+          "mild": {
+            "positive_count": 500,
+            "negative_count": 500,
+            "auc": 0.963328,
+            "auc_ci95": [
+              0.9523186,
+              0.9729643
+            ],
+            "full_gate": true
+          }
+        }
+      },
+      "bilateral_vs_blur": {
+        "feature_set": "goc_only_6",
+        "regularization": 0.0010000000000000009,
+        "strata": {
+          "full": {
+            "positive_count": 1250,
+            "negative_count": 1250,
+            "auc": 0.9578112,
+            "auc_ci95": [
+              0.950135472,
+              0.964990944
+            ],
+            "full_gate": true
+          },
+          "severe": {
+            "positive_count": 500,
+            "negative_count": 500,
+            "auc": 0.999736,
+            "auc_ci95": [
+              0.9994039,
+              0.999948
+            ],
+            "full_gate": true
+          },
+          "mild": {
+            "positive_count": 500,
+            "negative_count": 500,
+            "auc": 0.925972,
+            "auc_ci95": [
+              0.9103625,
+              0.9408484
+            ],
+            "full_gate": true
+          }
+        }
+      }
+    },
+    "s_grid_only_6": {
+      "bilateral_vs_jpeg": {
+        "feature_set": "s_grid_only_6",
+        "regularization": 0.0010000000000000018,
+        "strata": {
+          "full": {
+            "positive_count": 1250,
+            "negative_count": 1250,
+            "auc": 0.9520768,
+            "auc_ci95": [
+              0.9431919679999999,
+              0.9608133440000001
+            ],
+            "full_gate": true
+          },
+          "severe": {
+            "positive_count": 500,
+            "negative_count": 500,
+            "auc": 0.993088,
+            "auc_ci95": [
+              0.9870547000000001,
+              0.9979202
+            ],
+            "full_gate": true
+          },
+          "mild": {
+            "positive_count": 500,
+            "negative_count": 500,
+            "auc": 0.887704,
+            "auc_ci95": [
+              0.8663748,
+              0.9097206
+            ],
+            "full_gate": true
+          }
+        }
+      },
+      "bilateral_vs_blur": {
+        "feature_set": "s_grid_only_6",
+        "regularization": 0.0010000000000000065,
+        "strata": {
+          "full": {
+            "positive_count": 1250,
+            "negative_count": 1250,
+            "auc": 0.71041472,
+            "auc_ci95": [
+              0.690680752,
+              0.7303751359999999
+            ],
+            "full_gate": false
+          },
+          "severe": {
+            "positive_count": 500,
+            "negative_count": 500,
+            "auc": 0.733596,
+            "auc_ci95": [
+              0.7031345999999999,
+              0.7639807
+            ],
+            "full_gate": false
+          },
+          "mild": {
+            "positive_count": 500,
+            "negative_count": 500,
+            "auc": 0.71634,
+            "auc_ci95": [
+              0.6849431,
+              0.748131
+            ],
+            "full_gate": false
+          }
+        }
+      }
+    },
+    "single_point_q30_sigma3": {
+      "bilateral_vs_jpeg": {
+        "feature_set": "single_point_q30_sigma3",
+        "regularization": 0.0009999999999999966,
+        "strata": {
+          "full": {
+            "positive_count": 1250,
+            "negative_count": 1250,
+            "auc": 0.98794048,
+            "auc_ci95": [
+              0.9844818240000001,
+              0.990986928
+            ],
+            "full_gate": true
+          },
+          "severe": {
+            "positive_count": 500,
+            "negative_count": 500,
+            "auc": 0.998788,
+            "auc_ci95": [
+              0.9976395,
+              0.9996042
+            ],
+            "full_gate": true
+          },
+          "mild": {
+            "positive_count": 500,
+            "negative_count": 500,
+            "auc": 0.958296,
+            "auc_ci95": [
+              0.9452876,
+              0.9694937
+            ],
+            "full_gate": true
+          }
+        }
+      },
+      "bilateral_vs_blur": {
+        "feature_set": "single_point_q30_sigma3",
+        "regularization": 0.001000000000000004,
+        "strata": {
+          "full": {
+            "positive_count": 1250,
+            "negative_count": 1250,
+            "auc": 0.96830976,
+            "auc_ci95": [
+              0.962092496,
+              0.974101216
+            ],
+            "full_gate": true
+          },
+          "severe": {
+            "positive_count": 500,
+            "negative_count": 500,
+            "auc": 0.99716,
+            "auc_ci95": [
+              0.9926078,
+              0.999604
+            ],
+            "full_gate": true
+          },
+          "mild": {
+            "positive_count": 500,
+            "negative_count": 500,
+            "auc": 0.955168,
+            "auc_ci95": [
+              0.9435358,
+              0.96559
+            ],
+            "full_gate": true
+          }
+        }
+      }
+    }
+  },
+  "split_disjoint": true,
+  "primary_gate_all": true
+}
