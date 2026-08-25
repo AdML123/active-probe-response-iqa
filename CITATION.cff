@@ -5,6 +5,7 @@ date-released: 2026-08-25
 type: software
 license: MIT
 repository-code: "https://github.com/AdML123/active-probe-response-iqa"
+doi: "10.5281/zenodo.22098908"
 keywords:
   - image quality assessment
   - image forensics

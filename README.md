@@ -24,6 +24,6 @@ python analysis/evaluate_passive_baselines.py --help
 
 ## Citation and license
 
-Use the metadata in `CITATION.cff`. The code and derived outputs are released under the MIT License. The source dataset remains subject to its provider's terms and is not covered by this repository license.
+Use the metadata in `CITATION.cff`. The code and derived outputs are released under the MIT License. The source dataset remains subject to its provider's terms and is not covered by this repository license. The archived release DOI is [10.5281/zenodo.22098908](https://doi.org/10.5281/zenodo.22098908).
 
 Release version: `v0.1.3`.
