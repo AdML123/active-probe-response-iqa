@@ -62,6 +62,6 @@ python analysis/evaluate_passive_baselines.py --help
 
 ## Citation and license
 
-Use the metadata in `CITATION.cff`. The code and derived outputs are released under the MIT License. The source dataset remains subject to its provider's terms and is not covered by this repository license. The Zenodo concept DOI for this release line is [10.5281/zenodo.22098907](https://doi.org/10.5281/zenodo.22098907); a version DOI is added only after the user archives `v0.2.0`.
+Use the metadata in `CITATION.cff`. The code and derived outputs are released under the MIT License. The source dataset remains subject to its provider's terms and is not covered by this repository license. The Zenodo concept DOI for this release line is [10.5281/zenodo.22098907](https://doi.org/10.5281/zenodo.22098907). The archived `v0.2.0` version DOI is [10.5281/zenodo.22135593](https://doi.org/10.5281/zenodo.22135593).
 
 Release version: `v0.2.0`.

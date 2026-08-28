@@ -57,7 +57,7 @@ def test_lineage_declares_staged_boundary() -> None:
     assert lineage["synthetic_demo"]["generated_outputs_tracked"] is False
 
 
-def test_release_versions_and_concept_doi_agree() -> None:
+def test_release_versions_and_dois_agree() -> None:
     pyproject = (PACKAGE_ROOT / "pyproject.toml").read_text(encoding="utf-8")
     citation = (PACKAGE_ROOT / "CITATION.cff").read_text(encoding="utf-8")
     readme = (PACKAGE_ROOT / "README.md").read_text(encoding="utf-8")
@@ -65,7 +65,8 @@ def test_release_versions_and_concept_doi_agree() -> None:
     assert "version: 0.2.0" in citation
     assert "v0.2.0" in readme
     assert "10.5281/zenodo.22098907" in citation
-    assert "\ndoi:" not in citation
+    assert 'doi: "10.5281/zenodo.22135593"' in citation
+    assert "10.5281/zenodo.22135593" in readme
 
 
 def test_manifest_matches_release_files() -> None:

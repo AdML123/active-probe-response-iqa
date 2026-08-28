@@ -5,10 +5,14 @@ date-released: 2026-08-28
 type: software
 license: MIT
 repository-code: "https://github.com/AdML123/active-probe-response-iqa"
+doi: "10.5281/zenodo.22135593"
 identifiers:
   - type: doi
     value: "10.5281/zenodo.22098907"
-    description: "Zenodo concept DOI; the v0.2.0 version DOI is assigned after archival."
+    description: "Zenodo concept DOI."
+  - type: doi
+    value: "10.5281/zenodo.22135593"
+    description: "Zenodo version DOI for v0.2.0."
 keywords:
   - image quality assessment
   - image forensics
