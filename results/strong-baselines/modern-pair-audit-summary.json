@@ -1,0 +1,142 @@
+{
+  "schema_version": "iqa_ssc_modern_pair_audit_v1",
+  "status": "computed",
+  "pair_source_id": "v2_evaluation/bilateral_jpeg.json",
+  "pair_file_sha256": "2fd382a86e9fdb675992e545fe2bda8f79079f35a579c458fde75616f4a706ee",
+  "pair_count": 523,
+  "source_manifest_id": "v2_evaluation-image-manifest.json",
+  "source_manifest_sha256": "d27604669cf493b12cab1a63f58723dcde35419683856ff608dda0e809bade59",
+  "source_manifest_images": 500,
+  "contributing_images": 343,
+  "frozen_configuration_sha256": "E91CFE5276F0C6EAE7D80EF58F52499C11F15D8D13F1BE5E01E0CE8367F5B729",
+  "metrics": {
+    "musiq": {
+      "metric": "musiq",
+      "lower_better": false,
+      "configuration": {},
+      "frozen_configuration_sha256": "E91CFE5276F0C6EAE7D80EF58F52499C11F15D8D13F1BE5E01E0CE8367F5B729",
+      "backend": "pyiqa 0.1.13",
+      "status": "computed",
+      "pair_count": 523,
+      "valid_count": 523,
+      "reversal_count": 517,
+      "reversal_rate": 0.988527724665392,
+      "ci95": [
+        0.9786800968238168,
+        0.9961904761904762
+      ],
+      "median_oriented_difference": 11.34262466430664,
+      "bootstrap_seed": 20260827,
+      "bootstrap_resamples": 2000
+    },
+    "maniqa": {
+      "metric": "maniqa",
+      "lower_better": false,
+      "configuration": {
+        "test_sample": 1
+      },
+      "frozen_configuration_sha256": "E91CFE5276F0C6EAE7D80EF58F52499C11F15D8D13F1BE5E01E0CE8367F5B729",
+      "backend": "pyiqa 0.1.13",
+      "status": "computed",
+      "pair_count": 523,
+      "valid_count": 523,
+      "reversal_count": 237,
+      "reversal_rate": 0.45315487571701724,
+      "ci95": [
+        0.40925291849072337,
+        0.4971122485226208
+      ],
+      "median_oriented_difference": -0.011150658130645752,
+      "bootstrap_seed": 20260827,
+      "bootstrap_resamples": 2000
+    },
+    "topiq_nr": {
+      "metric": "topiq_nr",
+      "lower_better": false,
+      "configuration": {},
+      "frozen_configuration_sha256": "E91CFE5276F0C6EAE7D80EF58F52499C11F15D8D13F1BE5E01E0CE8367F5B729",
+      "backend": "pyiqa 0.1.13",
+      "status": "computed",
+      "pair_count": 523,
+      "valid_count": 523,
+      "reversal_count": 521,
+      "reversal_rate": 0.9961759082217974,
+      "ci95": [
+        0.9903474903474904,
+        1.0
+      ],
+      "median_oriented_difference": 0.14260333776474,
+      "bootstrap_seed": 20260827,
+      "bootstrap_resamples": 2000
+    },
+    "arniqa": {
+      "metric": "arniqa",
+      "lower_better": false,
+      "configuration": {},
+      "frozen_configuration_sha256": "E91CFE5276F0C6EAE7D80EF58F52499C11F15D8D13F1BE5E01E0CE8367F5B729",
+      "backend": "pyiqa 0.1.13",
+      "status": "computed",
+      "pair_count": 523,
+      "valid_count": 523,
+      "reversal_count": 489,
+      "reversal_rate": 0.9349904397705545,
+      "ci95": [
+        0.9113207547169812,
+        0.9572014093195407
+      ],
+      "median_oriented_difference": 0.196029394865036,
+      "bootstrap_seed": 20260827,
+      "bootstrap_resamples": 2000
+    },
+    "liqe": {
+      "metric": "liqe",
+      "lower_better": false,
+      "configuration": {},
+      "frozen_configuration_sha256": "E91CFE5276F0C6EAE7D80EF58F52499C11F15D8D13F1BE5E01E0CE8367F5B729",
+      "backend": "pyiqa 0.1.13",
+      "status": "computed",
+      "pair_count": 523,
+      "valid_count": 523,
+      "reversal_count": 485,
+      "reversal_rate": 0.9273422562141491,
+      "ci95": [
+        0.9022977702877883,
+        0.950885569188568
+      ],
+      "median_oriented_difference": 1.0495619773864746,
+      "bootstrap_seed": 20260827,
+      "bootstrap_resamples": 2000
+    },
+    "clipiqa": {
+      "metric": "clipiqa",
+      "lower_better": false,
+      "configuration": {},
+      "frozen_configuration_sha256": "E91CFE5276F0C6EAE7D80EF58F52499C11F15D8D13F1BE5E01E0CE8367F5B729",
+      "backend": "pyiqa 0.1.13",
+      "status": "computed",
+      "pair_count": 523,
+      "valid_count": 523,
+      "reversal_count": 256,
+      "reversal_rate": 0.4894837476099426,
+      "ci95": [
+        0.44871323529411766,
+        0.5317523809523809
+      ],
+      "median_oriented_difference": -0.008821457624435425,
+      "bootstrap_seed": 20260827,
+      "bootstrap_resamples": 2000
+    }
+  },
+  "blur_modern_audit": "deferred",
+  "protocol": {
+    "backend": "pyiqa 0.1.13",
+    "device": "cuda",
+    "input_range": "float32 RGB [0,1]",
+    "batch_size": 4,
+    "maniqa_test_sample": 1,
+    "bootstrap_seed": 20260827,
+    "bootstrap_resamples": 2000,
+    "global_loss_tolerance": 0.05,
+    "independence_unit": "image_id"
+  }
+}

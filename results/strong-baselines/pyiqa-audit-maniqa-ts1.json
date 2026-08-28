@@ -1,0 +1,157 @@
+{
+  "status": "computed",
+  "calibration_images": 250,
+  "evaluation_images": 250,
+  "bootstrap": 2000,
+  "bootstrap_seeds": {
+    "full": 20260824,
+    "severe": 20260825,
+    "mild": 20260826
+  },
+  "metrics": {
+    "maniqa": {
+      "bilateral_vs_jpeg": {
+        "full": {
+          "positive_count": 1250,
+          "negative_count": 1250,
+          "auc": 0.75261184,
+          "auc_ci95": [
+            0.7343796,
+            0.7708556639999999
+          ],
+          "model": {
+            "mean": [
+              0.36658341379761694
+            ],
+            "std": [
+              0.10014593456431108
+            ],
+            "direction": [
+              -0.7981797455889431
+            ],
+            "ridge": 0.0010000000000000002
+          }
+        },
+        "severe": {
+          "positive_count": 500,
+          "negative_count": 500,
+          "auc": 0.698912,
+          "auc_ci95": [
+            0.6663457,
+            0.7307828
+          ],
+          "model": {
+            "mean": [
+              0.36658341379761694
+            ],
+            "std": [
+              0.10014593456431108
+            ],
+            "direction": [
+              -0.7981797455889431
+            ],
+            "ridge": 0.0010000000000000002
+          }
+        },
+        "mild": {
+          "positive_count": 500,
+          "negative_count": 500,
+          "auc": 0.799608,
+          "auc_ci95": [
+            0.7722297,
+            0.8263545
+          ],
+          "model": {
+            "mean": [
+              0.36658341379761694
+            ],
+            "std": [
+              0.10014593456431108
+            ],
+            "direction": [
+              -0.7981797455889431
+            ],
+            "ridge": 0.0010000000000000002
+          }
+        }
+      },
+      "bilateral_vs_blur": {
+        "full": {
+          "positive_count": 1250,
+          "negative_count": 1250,
+          "auc": 0.76934976,
+          "auc_ci95": [
+            0.750361632,
+            0.78692608
+          ],
+          "model": {
+            "mean": [
+              0.2811262119576335
+            ],
+            "std": [
+              0.09375749838339399
+            ],
+            "direction": [
+              0.9685540358201585
+            ],
+            "ridge": 0.001
+          }
+        },
+        "severe": {
+          "positive_count": 500,
+          "negative_count": 500,
+          "auc": 0.851964,
+          "auc_ci95": [
+            0.827377,
+            0.8750646999999999
+          ],
+          "model": {
+            "mean": [
+              0.2811262119576335
+            ],
+            "std": [
+              0.09375749838339399
+            ],
+            "direction": [
+              0.9685540358201585
+            ],
+            "ridge": 0.001
+          }
+        },
+        "mild": {
+          "positive_count": 500,
+          "negative_count": 500,
+          "auc": 0.705068,
+          "auc_ci95": [
+            0.6724981,
+            0.7375804
+          ],
+          "model": {
+            "mean": [
+              0.2811262119576335
+            ],
+            "std": [
+              0.09375749838339399
+            ],
+            "direction": [
+              0.9685540358201585
+            ],
+            "ridge": 0.001
+          }
+        }
+      }
+    }
+  },
+  "protocol": {
+    "calibration_manifest_sha256": "606f94106ebb793d21844d8a748c2e6cd1be8ce3eb5ef2b53d6002520ff0ec7a",
+    "evaluation_manifest_sha256": "fecfdc8eb8c87dee11578174f8887073b41740965ecef8d6a8a152c40e6db8c0",
+    "metrics": [
+      "maniqa"
+    ],
+    "batch_size": 4,
+    "maniqa_test_sample": 1,
+    "row_count_per_metric": {
+      "maniqa": 7500
+    }
+  }
+}

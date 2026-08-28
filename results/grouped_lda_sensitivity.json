@@ -1,0 +1,48 @@
+{
+  "schema_version": "iqa_ssc_grouped_lda_sensitivity_v1",
+  "status": "computed",
+  "calibration_images": 250,
+  "evaluation_images": 250,
+  "grouped_vectors": 1500,
+  "bootstrap_resamples": 2000,
+  "bootstrap_seeds": {
+    "full": 20260824
+  },
+  "comparisons": {
+    "bilateral_vs_jpeg": {
+      "feature_set": "image_mean_of_five_base_conditions",
+      "calibration_images_per_class": 250,
+      "evaluation_images_per_class": 250,
+      "auc": 0.996128,
+      "auc_ci95": [
+        0.98824,
+        1.0
+      ],
+      "regularization": 0.0009999999999999998,
+      "mild": null,
+      "severe": null,
+      "stratum_note": "Severity strata are not estimable after averaging the five base-condition vectors per image."
+    },
+    "bilateral_vs_blur": {
+      "feature_set": "image_mean_of_five_base_conditions",
+      "calibration_images_per_class": 250,
+      "evaluation_images_per_class": 250,
+      "auc": 0.997696,
+      "auc_ci95": [
+        0.995184,
+        0.999376
+      ],
+      "regularization": 0.0009999999999999998,
+      "mild": null,
+      "severe": null,
+      "stratum_note": "Severity strata are not estimable after averaging the five base-condition vectors per image."
+    }
+  },
+  "row_level_reference": "trajectory_detector.json",
+  "inputs": {
+    "calibration_rows_sha256": "c26d9d634ab8ebe39d68dd795c568cd8ec8e4e163038af945728bcb41d88f63e",
+    "evaluation_rows_sha256": "0af27c24e0e2af9c64cf340fe1eca507c13163a19d7aa10d4b9513334c58dc3b",
+    "calibration_manifest_sha256": "606f94106ebb793d21844d8a748c2e6cd1be8ce3eb5ef2b53d6002520ff0ec7a",
+    "evaluation_manifest_sha256": "fecfdc8eb8c87dee11578174f8887073b41740965ecef8d6a8a152c40e6db8c0"
+  }
+}

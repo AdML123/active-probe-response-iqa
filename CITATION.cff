@@ -1,10 +1,14 @@
 cff-version: 1.2.0
 title: "Active Probe-Response Detection of Spatially Selective Image Degradation"
-version: 0.1.2
-date-released: 2026-08-25
+version: 0.2.0
+date-released: 2026-08-28
 type: software
 license: MIT
 repository-code: "https://github.com/AdML123/active-probe-response-iqa"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.22098907"
+    description: "Zenodo concept DOI; the v0.2.0 version DOI is assigned after archival."
 keywords:
   - image quality assessment
   - image forensics

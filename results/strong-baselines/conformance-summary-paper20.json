@@ -1,0 +1,82 @@
+{
+  "status": "pyiqa_backend_ready",
+  "environment": {
+    "name": "paper20-cu128",
+    "python": "3.10.20",
+    "pyiqa": "0.1.13",
+    "torch": "2.11.0+cu128",
+    "cuda": "12.8",
+    "scikit_learn": "1.7.2",
+    "device": "cuda"
+  },
+  "images": 20,
+  "batch_size": 1,
+  "repeat_tolerance": 1e-06,
+  "candidates": {
+    "brisque": {
+      "status": "pyiqa_validated",
+      "class": "BRISQUE",
+      "lower_better": true,
+      "output_sha256": "b14efafa00b3c159dcfa998b6cd425a29cd9dcecec668d0af4c638e7fafbc674",
+      "repeat_output_sha256": "b14efafa00b3c159dcfa998b6cd425a29cd9dcecec668d0af4c638e7fafbc674"
+    },
+    "niqe": {
+      "status": "pyiqa_validated",
+      "class": "NIQE",
+      "lower_better": true,
+      "output_sha256": "78a572b81baa6607bf4357c34abe4657ed5e70e2d737492e10645fb0e4b013a5",
+      "repeat_output_sha256": "78a572b81baa6607bf4357c34abe4657ed5e70e2d737492e10645fb0e4b013a5"
+    },
+    "piqe": {
+      "status": "pyiqa_validated",
+      "class": "PIQE",
+      "lower_better": true,
+      "output_sha256": "11d283463d31770a80febdf5cded816c1a3cc85b19aab63c0ba29afd2a3bdc3a",
+      "repeat_output_sha256": "11d283463d31770a80febdf5cded816c1a3cc85b19aab63c0ba29afd2a3bdc3a"
+    },
+    "musiq": {
+      "status": "pyiqa_validated",
+      "class": "MUSIQ",
+      "lower_better": false,
+      "output_sha256": "96d28a7bb6ac05e7bc387d399a6c24c0cae2c6414bd417958dbb0fbadce2220e",
+      "repeat_output_sha256": "96d28a7bb6ac05e7bc387d399a6c24c0cae2c6414bd417958dbb0fbadce2220e"
+    },
+    "maniqa": {
+      "status": "pyiqa_validated",
+      "class": "MANIQA",
+      "lower_better": false,
+      "output_sha256": "acb89a50a07764f9e3b2d057ad744e8f81c155a6291e8c67fabcc17cbf72f7f2",
+      "repeat_output_sha256": "acb89a50a07764f9e3b2d057ad744e8f81c155a6291e8c67fabcc17cbf72f7f2"
+    },
+    "topiq_nr": {
+      "status": "pyiqa_validated",
+      "class": "CFANet",
+      "lower_better": false,
+      "output_sha256": "75f0df6f173c171a8a00246786804e8af014408890994e5636327cfec3dc48f1",
+      "repeat_output_sha256": "75f0df6f173c171a8a00246786804e8af014408890994e5636327cfec3dc48f1"
+    },
+    "arniqa": {
+      "status": "pyiqa_validated",
+      "class": "ARNIQA",
+      "lower_better": false,
+      "output_sha256": "9539e596598f75813b354398a4bbec2546516f2fc1a6d248036c9569ef8bda7c",
+      "repeat_output_sha256": "9539e596598f75813b354398a4bbec2546516f2fc1a6d248036c9569ef8bda7c"
+    },
+    "liqe": {
+      "status": "pyiqa_validated",
+      "class": "LIQE",
+      "lower_better": false,
+      "output_sha256": "3e67058a806b39fa539fce2c551d06ebbb28c9d1be05729fada97c41f171f278",
+      "repeat_output_sha256": "3e67058a806b39fa539fce2c551d06ebbb28c9d1be05729fada97c41f171f278"
+    },
+    "clipiqa": {
+      "status": "pyiqa_validated",
+      "class": "CLIPIQA",
+      "lower_better": false,
+      "output_sha256": "f5cf61a2fa355e638eaf017c8d4bceb897c34aa2bd54c01882d4fd4607b07a1e",
+      "repeat_output_sha256": "f5cf61a2fa355e638eaf017c8d4bceb897c34aa2bd54c01882d4fd4607b07a1e"
+    }
+  },
+  "results_written": false,
+  "interpretation": "Backend determinism check only; no energy-matched AUC or manuscript claim."
+}

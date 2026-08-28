@@ -1,0 +1,157 @@
+{
+  "status": "computed",
+  "calibration_images": 250,
+  "evaluation_images": 250,
+  "bootstrap": 2000,
+  "bootstrap_seeds": {
+    "full": 20260824,
+    "severe": 20260825,
+    "mild": 20260826
+  },
+  "metrics": {
+    "clipiqa": {
+      "bilateral_vs_jpeg": {
+        "full": {
+          "positive_count": 1250,
+          "negative_count": 1250,
+          "auc": 0.70868224,
+          "auc_ci95": [
+            0.688509648,
+            0.729812864
+          ],
+          "model": {
+            "mean": [
+              0.5221509259998799
+            ],
+            "std": [
+              0.11573413464925575
+            ],
+            "direction": [
+              -0.6992393613911401
+            ],
+            "ridge": 0.0010000000000000002
+          }
+        },
+        "severe": {
+          "positive_count": 500,
+          "negative_count": 500,
+          "auc": 0.615576,
+          "auc_ci95": [
+            0.5813242,
+            0.6509938
+          ],
+          "model": {
+            "mean": [
+              0.5221509259998799
+            ],
+            "std": [
+              0.11573413464925575
+            ],
+            "direction": [
+              -0.6992393613911401
+            ],
+            "ridge": 0.0010000000000000002
+          }
+        },
+        "mild": {
+          "positive_count": 500,
+          "negative_count": 500,
+          "auc": 0.734376,
+          "auc_ci95": [
+            0.7021189,
+            0.7645314999999999
+          ],
+          "model": {
+            "mean": [
+              0.5221509259998799
+            ],
+            "std": [
+              0.11573413464925575
+            ],
+            "direction": [
+              -0.6992393613911401
+            ],
+            "ridge": 0.0010000000000000002
+          }
+        }
+      },
+      "bilateral_vs_blur": {
+        "full": {
+          "positive_count": 1250,
+          "negative_count": 1250,
+          "auc": 0.82357632,
+          "auc_ci95": [
+            0.806578448,
+            0.83940728
+          ],
+          "model": {
+            "mean": [
+              0.4275551772713661
+            ],
+            "std": [
+              0.09928815818620197
+            ],
+            "direction": [
+              1.0885148292919278
+            ],
+            "ridge": 0.0010000000000000002
+          }
+        },
+        "severe": {
+          "positive_count": 500,
+          "negative_count": 500,
+          "auc": 0.94984,
+          "auc_ci95": [
+            0.9368752,
+            0.9614697999999999
+          ],
+          "model": {
+            "mean": [
+              0.4275551772713661
+            ],
+            "std": [
+              0.09928815818620197
+            ],
+            "direction": [
+              1.0885148292919278
+            ],
+            "ridge": 0.0010000000000000002
+          }
+        },
+        "mild": {
+          "positive_count": 500,
+          "negative_count": 500,
+          "auc": 0.739312,
+          "auc_ci95": [
+            0.7099669000000001,
+            0.7707042
+          ],
+          "model": {
+            "mean": [
+              0.4275551772713661
+            ],
+            "std": [
+              0.09928815818620197
+            ],
+            "direction": [
+              1.0885148292919278
+            ],
+            "ridge": 0.0010000000000000002
+          }
+        }
+      }
+    }
+  },
+  "protocol": {
+    "calibration_manifest_sha256": "606f94106ebb793d21844d8a748c2e6cd1be8ce3eb5ef2b53d6002520ff0ec7a",
+    "evaluation_manifest_sha256": "fecfdc8eb8c87dee11578174f8887073b41740965ecef8d6a8a152c40e6db8c0",
+    "metrics": [
+      "clipiqa"
+    ],
+    "batch_size": 4,
+    "maniqa_test_sample": null,
+    "row_count_per_metric": {
+      "clipiqa": 7500
+    }
+  }
+}

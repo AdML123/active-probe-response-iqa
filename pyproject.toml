@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "iqa-ssc"
+version = "0.2.0"
+description = "Calibration-only active probe-response utilities for spatially selective image degradation"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {file = "LICENSE"}
+authors = [
+  {name = "Yuefei Zhang"},
+  {name = "Ying Xu"},
+  {name = "Xiaoying Tao"},
+]
+dependencies = [
+  "numpy>=1.24",
+  "opencv-python-headless>=4.8",
+  "PyWavelets>=1.4",
+]
+
+[project.optional-dependencies]
+iqa = ["pyiqa==0.1.13"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

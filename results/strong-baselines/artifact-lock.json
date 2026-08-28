@@ -1,0 +1,74 @@
+{
+  "schema_version": 2,
+  "status": "source_locked_external_weights_validated",
+  "dependencies": {
+    "pyiqa": {
+      "version_target": "0.1.13",
+      "archive": "external-reference/IQA-PyTorch-main.zip",
+      "archive_sha256": "EB6617089E56938FFF06BCA59D8536136C44BA5E426BBAEDA57990D50CCBD730",
+      "license_boundary": "PolyForm Noncommercial 1.0.0 and component-specific notices",
+      "public_payload": false,
+      "runtime_status": "paper20-cu128: pyiqa 0.1.13; torch 2.11.0+cu128; CUDA 12.8; scikit-learn 1.7.2; 20-image repeated conformance passed",
+      "conformance_output": "results/strong-baselines/pyiqa-conformance-20.json",
+      "conformance_batch_size": 1,
+      "conformance_images": 20,
+      "conformance_repeat_tolerance": 1e-6
+    }
+  },
+  "candidate_registry": {
+    "brisque": {"tier": "core", "inclusion_basis": "pyiqa availability, finite deterministic output, frozen preprocessing, license recorded"},
+    "niqe": {"tier": "core", "inclusion_basis": "pyiqa availability, finite deterministic output, frozen preprocessing, license recorded"},
+    "piqe": {"tier": "core", "inclusion_basis": "pyiqa availability, finite deterministic output, frozen preprocessing, license recorded"},
+    "musiq": {"tier": "core", "inclusion_basis": "pyiqa availability, KonIQ configuration, finite deterministic output, frozen preprocessing, license recorded"},
+    "maniqa": {"tier": "core", "inclusion_basis": "pyiqa availability, KonIQ configuration, finite deterministic output, frozen preprocessing, license recorded"},
+    "topiq_nr": {"tier": "extension", "inclusion_basis": "pyiqa availability, documented configuration, finite deterministic output, frozen preprocessing, license recorded"},
+    "liqe": {"tier": "extension", "inclusion_basis": "pyiqa availability, documented configuration, finite deterministic output, frozen preprocessing, license recorded"},
+    "arniqa": {"tier": "extension", "inclusion_basis": "pyiqa availability, documented configuration, finite deterministic output, frozen preprocessing, license recorded"},
+    "clipiqa": {"tier": "extension", "inclusion_basis": "pyiqa availability, documented configuration, finite deterministic output, frozen preprocessing, license recorded"}
+  },
+  "evaluation_outputs": {
+    "classical_pyiqa": "results/strong-baselines/pyiqa-audit-classical.json",
+    "learned_pyiqa": "results/strong-baselines/pyiqa-audit-learned-summary.json",
+    "learned_pyiqa_detail": [
+      "results/strong-baselines/pyiqa-audit-musiq.json",
+      "results/strong-baselines/pyiqa-audit-maniqa-ts1.json",
+      "results/strong-baselines/pyiqa-audit-topiq-nr.json",
+      "results/strong-baselines/pyiqa-audit-arniqa.json",
+      "results/strong-baselines/pyiqa-audit-liqe.json",
+      "results/strong-baselines/pyiqa-audit-clipiqa.json"
+    ],
+    "learned_conformance": "results/strong-baselines/pyiqa-conformance-20.json",
+    "forensic_adapters": "results/strong-baselines/forensic-adapters-summary.json"
+  },
+  "methods": {
+    "ding2019": {"paper": "Ding et al., Smoothing Identification for Digital Image Forensics", "doi": "10.1007/s11042-018-6807-6", "class": "published_passive_forensic", "tier": "adapted_forensic", "implementation_status": "adapted_feature_evaluated_250_calibration_250_evaluation"},
+    "shehin2022": {"paper": "Shehin and Sankar, Adaptive Bilateral Filtering Detection Using Frequency Residuals for Digital Image Forensics", "doi": "10.1109/IWSSIP55020.2022.9854436", "class": "published_passive_forensic", "tier": "adapted_forensic", "implementation_status": "adapted_feature_evaluated_250_calibration_250_evaluation_out_of_domain_filter"},
+    "brisque": {"class": "scalar_nr_iqa", "tier": "pyiqa_core", "implementation_status": "pyiqa_validated_20_image_repeat", "pyiqa_name": "brisque", "weights_in_public_package": false},
+    "niqe": {"class": "scalar_nr_iqa", "tier": "pyiqa_core", "implementation_status": "pyiqa_validated_20_image_repeat", "pyiqa_name": "niqe", "weights_in_public_package": false},
+    "piqe": {"class": "scalar_nr_iqa", "tier": "pyiqa_core", "implementation_status": "pyiqa_validated_20_image_repeat", "pyiqa_name": "piqe", "weights_in_public_package": false},
+    "musiq": {"paper": "Ke et al., MUSIQ: Multi-Scale Image Quality Transformer", "doi": "10.1109/ICCV48922.2021.00510", "class": "pretrained_learned_nr_iqa", "tier": "pyiqa_core", "training_dataset": "KonIQ-10k", "pyiqa_name": "musiq", "implementation_status": "pyiqa_validated_20_image_repeat", "evaluation_status": "full_250_calibration_250_evaluation", "weights_in_public_package": false},
+    "maniqa": {"paper": "Yang et al., MANIQA: Multi-Dimension Attention Network for No-Reference Image Quality Assessment", "class": "pretrained_learned_nr_iqa", "tier": "pyiqa_core", "training_dataset": "KonIQ-10k", "pyiqa_name": "maniqa", "implementation_status": "pyiqa_validated_20_image_repeat", "evaluation_status": "full_250_calibration_250_evaluation_adapted_test_sample_1", "weights_in_public_package": false},
+    "topiq_nr": {"class": "pretrained_learned_nr_iqa", "tier": "pyiqa_extension", "pyiqa_name": "topiq_nr", "implementation_status": "pyiqa_validated_20_image_repeat", "evaluation_status": "full_250_calibration_250_evaluation", "weights_in_public_package": false},
+    "liqe": {"class": "pretrained_learned_nr_iqa", "tier": "pyiqa_extension", "pyiqa_name": "liqe", "implementation_status": "pyiqa_validated_20_image_repeat", "evaluation_status": "full_250_calibration_250_evaluation", "weights_in_public_package": false},
+    "arniqa": {"class": "pretrained_learned_nr_iqa", "tier": "pyiqa_extension", "pyiqa_name": "arniqa", "implementation_status": "pyiqa_validated_20_image_repeat", "evaluation_status": "full_250_calibration_250_evaluation", "weights_in_public_package": false},
+    "clipiqa": {"class": "pretrained_learned_nr_iqa", "tier": "pyiqa_extension", "pyiqa_name": "clipiqa", "implementation_status": "pyiqa_validated_20_image_repeat", "evaluation_status": "full_250_calibration_250_evaluation", "weights_in_public_package": false}
+  },
+  "artifacts": [
+    {"name": "Smoothing identification for digital image forensics.pdf", "method": "ding2019", "source_url": "https://doi.org/10.1007/s11042-018-6807-6", "sha256": "E7AE14E6A49D1D02390FA68E46171BA9DDB98FCD9DC051937947FC3492CF5DAF", "license_status": "paper-only", "public_payload": false},
+    {"name": "Adaptive_Bilateral_Filtering_Detection_Using_Frequency_Residuals_for_Digital_Image_Forensics.pdf", "method": "shehin2022", "source_url": "https://doi.org/10.1109/IWSSIP55020.2022.9854436", "sha256": "35DB732D902AD7A792F8B578B3C0CBC26E98F7256EBF997CE12E64A23D39CF30", "license_status": "paper-only", "public_payload": false},
+    {"name": "Ke_MUSIQ_Multi-Scale_Image_Quality_Transformer_ICCV_2021_paper.pdf", "method": "musiq", "source_url": "https://openaccess.thecvf.com/content/ICCV2021/papers/Ke_MUSIQ_Multi-Scale_Image_Quality_Transformer_ICCV_2021_paper.pdf", "sha256": "86E9E683CB2FF2DA020CBD5D84A16413C99723F0156539DA522F847798E50AB1", "license_status": "paper-only", "public_payload": false},
+    {"name": "Yang_MANIQA_Multi-Dimension_Attention_Network_for_No-Reference_Image_Quality_Assessment_CVPRW_2022_paper.pdf", "method": "maniqa", "source_url": "https://openaccess.thecvf.com/content/CVPR2022W/NTIRE/papers/Yang_MANIQA_Multi-Dimension_Attention_Network_for_No-Reference_Image_Quality_Assessment_CVPRW_2022_paper.pdf", "sha256": "744C0205340911B0986E0F7034EB11E6FD86668041A7783F582FF11E6604B59A", "license_status": "paper-only", "public_payload": false},
+    {"name": "MANIQA-master.zip", "method": "maniqa", "source_url": "https://github.com/IIGROUP/MANIQA", "sha256": "E2327D5E9C5D41466BE440F1F7946C95B064F09AD91CB8922344D2A8AAC3709E", "license_status": "local-use-only", "public_payload": false}
+  ],
+  "frozen_protocol": {
+    "calibration_manifest_sha256": "606F94106EBB793D21844D8A748C2E6CD1BE8CE3EB5EF2B53D6002520FF0EC7A",
+    "evaluation_manifest_sha256": "FECFDC8EB8C87DEE11578174F8887073B41740965ECEF8D6A8A152C40E6DB8C0",
+    "detector_manifest_sha256": "2BFDA7FB37E6639F11B86CFEFF051AC1EDB40A1BB37C96EE7E0324BEEC743853",
+    "calibration_images": 250,
+    "evaluation_images": 250,
+    "base_families": ["bilateral", "jpeg", "gaussian_blur"],
+    "levels_per_family": 5,
+    "evaluation_bootstrap_resamples": 2000,
+    "bootstrap_unit": "image_id"
+  }
+}

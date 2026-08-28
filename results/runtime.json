@@ -1,0 +1,27 @@
+{
+  "iterations": 30,
+  "median_ms": {
+    "transform_ms": 406.3853000989184,
+    "feature_ms": 4566.600149672013,
+    "classification_ms": 0.08960001287050545,
+    "total_ms": 4972.324250004021
+  },
+  "iqr_ms": {
+    "transform_ms": 20.160100451903418,
+    "feature_ms": 319.037175286212,
+    "classification_ms": 0.027549933292903006,
+    "total_ms": 325.3159500018228
+  },
+  "image_shape": [
+    512,
+    512,
+    3
+  ],
+  "device": "CPU",
+  "python_version": "3.12.13",
+  "package_commit": "e28da620bef5df991063905a0fbf4d2bbfb66bb1",
+  "hardware": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+  "control": "jpeg",
+  "probe_count": 10,
+  "base_condition_count": 15
+}

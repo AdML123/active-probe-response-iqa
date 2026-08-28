@@ -1,0 +1,114 @@
+{
+  "schema_version": "iqa_ssc_modern_pair_audit_lock_v1",
+  "status": "frozen",
+  "pair_source_id": "v2_evaluation/bilateral_jpeg.json",
+  "pair_file_sha256": "2FD382A86E9FDB675992E545FE2BDA8F79079F35A579C458FDE75616F4A706EE",
+  "pair_count": 523,
+  "unique_image_count": 343,
+  "image_id_set_sha256": "96F607B79CDF5EC646DF3ADA0CF972C25414CD97ACFF81B214D4CC1E717D0713",
+  "image_manifest_source_id": "v2_evaluation-image-manifest.json",
+  "image_manifest_sha256": "D27604669CF493B12CAB1A63F58723DCDE35419683856FF608DDA0E809BADE59",
+  "image_manifest_count": 500,
+  "control_family": "jpeg",
+  "global_loss_tolerance": 0.05,
+  "metrics": [
+    "musiq",
+    "maniqa",
+    "topiq_nr",
+    "arniqa",
+    "liqe",
+    "clipiqa"
+  ],
+  "backend": "pyiqa 0.1.13",
+  "backend_package": "pyiqa",
+  "backend_version": "0.1.13",
+  "artifact_lock": {
+    "path": "public-repro-package/results/strong-baselines/artifact-lock.json",
+    "content_sha256": "63C5B4F46CCDCD9A6D9ED6D1F403ECE7023E97CB816262181AFE3BF3D06D85E9"
+  },
+  "implementation": {
+    "evaluator": "public-repro-package/analysis/evaluate_pyiqa_pair_audit.py",
+    "source_module": "public-repro-package/src/iqa_ssc/pair_audit.py",
+    "transform": "public-repro-package/src/iqa_ssc/transforms.py",
+    "preprocessing": "float32 RGB [0,1], OpenCV BGR read then RGB conversion",
+    "fingerprint_mode": "SHA-256 of UTF-8 text with LF-normalized line endings",
+    "evaluator_sha256": "5DB2252F23C70EB1CC64D6F499371F026EBEDB331EF10EF3F50299EEFCD108AE",
+    "pair_audit_module_sha256": "690A793614D297C172B3274418574E9D6A8DE9151184076810CFD20073CA0C2D",
+    "transform_module_sha256": "FAB816A67780FA48705B6E6358A69E75D1BA16106571026B3E3728AF51E4E507",
+    "files": [
+      {
+        "path": "public-repro-package/analysis/evaluate_pyiqa_pair_audit.py",
+        "sha256": "5DB2252F23C70EB1CC64D6F499371F026EBEDB331EF10EF3F50299EEFCD108AE"
+      },
+      {
+        "path": "public-repro-package/src/iqa_ssc/pair_audit.py",
+        "sha256": "690A793614D297C172B3274418574E9D6A8DE9151184076810CFD20073CA0C2D"
+      },
+      {
+        "path": "public-repro-package/src/iqa_ssc/transforms.py",
+        "sha256": "FAB816A67780FA48705B6E6358A69E75D1BA16106571026B3E3728AF51E4E507"
+      }
+    ]
+  },
+  "score_orientation": "higher quality after sign correction",
+  "reversal_rule": "oriented bilateral score > oriented JPEG score",
+  "tie_rule": "ties are not reversals",
+  "invalid_row_policy": "fail closed for malformed pairs, missing images, nonfinite scores, or unsupported condition indices; no imputation",
+  "maniqa_test_sample": 1,
+  "runtime_parameters": {
+    "device": "cuda",
+    "batch_size": 4,
+    "maniqa_test_sample": 1,
+    "bootstrap_resamples": 2000
+  },
+  "frozen_configuration": {
+    "pair_source_id": "v2_evaluation/bilateral_jpeg.json",
+    "pair_file_sha256": "2fd382a86e9fdb675992e545fe2bda8f79079f35a579c458fde75616f4a706ee",
+    "image_manifest_source_id": "v2_evaluation-image-manifest.json",
+    "image_manifest_sha256": "d27604669cf493b12cab1a63f58723dcde35419683856ff608dda0e809bade59",
+    "control_family": "jpeg",
+    "global_loss_tolerance": 0.05,
+    "metrics": [
+      "musiq",
+      "maniqa",
+      "topiq_nr",
+      "arniqa",
+      "liqe",
+      "clipiqa"
+    ],
+    "backend_package": "pyiqa",
+    "backend_version": "0.1.13",
+    "score_orientation": "higher quality after sign correction",
+    "reversal_rule": "oriented bilateral score > oriented JPEG score",
+    "tie_rule": "ties are not reversals",
+    "invalid_row_policy": "fail closed for malformed pairs, missing images, nonfinite scores, or unsupported condition indices; no imputation",
+    "runtime_parameters": {
+      "device": "cuda",
+      "batch_size": 4,
+      "maniqa_test_sample": 1,
+      "bootstrap_resamples": 2000
+    },
+    "bootstrap": {
+      "unit": "image_id",
+      "resamples": 2000,
+      "seed": 20260827,
+      "interval": "percentile 95%"
+    },
+    "blur_modern_audit": "deferred"
+  },
+  "frozen_configuration_sha256": "E91CFE5276F0C6EAE7D80EF58F52499C11F15D8D13F1BE5E01E0CE8367F5B729",
+  "bootstrap": {
+    "unit": "image_id",
+    "resamples": 2000,
+    "seed": 20260827,
+    "interval": "percentile 95%"
+  },
+  "smoke_test": {
+    "pair_count": 20,
+    "runs": 2,
+    "mode": "offline local model cache",
+    "jsonl_sha256": "73667E30AF849CABA61C9D4B94AEEF6E05EFD92E255C9DA0BEABD0B8BCF1C77C",
+    "result": "identical finite outputs for all six metrics"
+  },
+  "blur_modern_audit": "deferred"
+}

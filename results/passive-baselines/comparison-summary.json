@@ -1,0 +1,25 @@
+{
+  "schema_version": "iqa_ssc_passive_baseline_comparison_v1",
+  "status": "computed",
+  "dataset": "CelebA-HQ",
+  "calibration_images": 250,
+  "evaluation_images": 250,
+  "evaluation_rows_per_class": 1250,
+  "bootstrap_resamples": 2000,
+  "bootstrap_seeds": {"full": 20260824, "severe": 20260825, "mild": 20260826},
+  "calibration_manifest_sha256": "606f94106ebb793d21844d8a748c2e6cd1be8ce3eb5ef2b53d6002520ff0ec7a",
+  "evaluation_manifest_sha256": "fecfdc8eb8c87dee11578174f8887073b41740965ecef8d6a8a152c40e6db8c0",
+  "comparisons": {
+    "bilateral_vs_jpeg": {
+      "active_probe_response_12d": {"auc": 0.99611136, "auc_ci95": [0.994481056, 0.99746432]},
+      "local_texture_adapter": {"auc": 0.85493184, "auc_ci95": [0.838653472, 0.86949816]},
+      "dct_high_frequency_ratio_adapter": {"auc": 0.40429184, "auc_ci95": [0.380600608, 0.428314968]}
+    },
+    "bilateral_vs_blur": {
+      "active_probe_response_12d": {"auc": 0.96518144, "auc_ci95": [0.957987728, 0.972023584]},
+      "local_texture_adapter": {"auc": 0.94649856, "auc_ci95": [0.9378984, 0.9543848]},
+      "dct_high_frequency_ratio_adapter": {"auc": 0.58248, "auc_ci95": [0.559990064, 0.604930856]}
+    }
+  },
+  "scope": "The two passive methods are transparent paper-inspired adapters, not exact reimplementations of the cited published training pipelines."
+}

@@ -1,0 +1,28 @@
+{
+  "release_version": "v0.2.0",
+  "release_status": "staged_not_published",
+  "concept_doi": "10.5281/zenodo.22098907",
+  "version_doi": null,
+  "scientific_dataset": {
+    "name": "CelebA-HQ",
+    "distribution": "external_provider",
+    "included": false,
+    "local_manifests_required": true
+  },
+  "derived_results": {
+    "included": true,
+    "source_images_included": false,
+    "model_weights_included": false
+  },
+  "synthetic_demo": {
+    "included_generator": true,
+    "generated_outputs_tracked": false,
+    "seed": 20260828,
+    "purpose": "weight-free installation and image-processing smoke test"
+  },
+  "manuscript_artifacts": {
+    "latex_included": false,
+    "pdf_included": false,
+    "submission_materials_included": false
+  }
+}

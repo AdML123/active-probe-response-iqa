@@ -1,0 +1,63 @@
+{
+  "schema_version": "iqa_ssc_pyiqa_learned_audit_v1",
+  "status": "computed",
+  "backend": "pyiqa 0.1.13",
+  "runtime": "paper20-cu128",
+  "dataset": "CelebA-HQ",
+  "calibration_images": 250,
+  "evaluation_images": 250,
+  "rows_per_class": 1250,
+  "bootstrap_resamples": 2000,
+  "bootstrap_unit": "image_id",
+  "calibration_manifest_sha256": "606f94106ebb793d21844d8a748c2e6cd1be8ce3eb5ef2b53d6002520ff0ec7a",
+  "evaluation_manifest_sha256": "fecfdc8eb8c87dee11578174f8887073b41740965ecef8d6a8a152c40e6db8c0",
+  "configuration": {
+    "input_range": "float32 RGB [0,1]",
+    "batch_size": 4,
+    "musiq": "pyiqa default KonIQ-10k configuration",
+    "maniqa": "pyiqa KonIQ-10k weights with test_sample=1 compute-bounded adaptation",
+    "topiq_nr": "pyiqa default KonIQ-10k configuration",
+    "arniqa": "pyiqa default KonIQ regressor",
+    "liqe": "pyiqa default KonIQ configuration",
+    "clipiqa": "pyiqa default learned-prompt configuration"
+  },
+  "metrics": {
+    "musiq": {
+      "source_result": "results/strong-baselines/pyiqa-audit-musiq.json",
+      "full": {"auc": 0.6312896, "auc_ci95": [0.609726208, 0.652001408]},
+      "severe": {"auc": 0.714484, "auc_ci95": [0.681834, 0.7458919]},
+      "mild": {"auc": 0.618028, "auc_ci95": [0.5832867, 0.6523464]}
+    },
+    "maniqa": {
+      "source_result": "results/strong-baselines/pyiqa-audit-maniqa-ts1.json",
+      "full": {"auc": 0.75261184, "auc_ci95": [0.7343796, 0.770855664]},
+      "severe": {"auc": 0.698912, "auc_ci95": [0.6663457, 0.7307828]},
+      "mild": {"auc": 0.799608, "auc_ci95": [0.7722297, 0.8263545]}
+    },
+    "topiq_nr": {
+      "source_result": "results/strong-baselines/pyiqa-audit-topiq-nr.json",
+      "full": {"auc": 0.78323008, "auc_ci95": [0.7662184, 0.800938928]},
+      "severe": {"auc": 0.874608, "auc_ci95": [0.8510096, 0.8957804]},
+      "mild": {"auc": 0.734452, "auc_ci95": [0.7053431, 0.7635233]}
+    },
+    "arniqa": {
+      "source_result": "results/strong-baselines/pyiqa-audit-arniqa.json",
+      "full": {"auc": 0.73249856, "auc_ci95": [0.713052232, 0.752171552]},
+      "severe": {"auc": 0.964968, "auc_ci95": [0.9547437, 0.9744018]},
+      "mild": {"auc": 0.498308, "auc_ci95": [0.4631974, 0.53485275]}
+    },
+    "liqe": {
+      "source_result": "results/strong-baselines/pyiqa-audit-liqe.json",
+      "full": {"auc": 0.4968064, "auc_ci95": [0.474553744, 0.519974528]},
+      "severe": {"auc": 0.624452, "auc_ci95": [0.5898928, 0.657652]},
+      "mild": {"auc": 0.441548, "auc_ci95": [0.4069546, 0.4789844]}
+    },
+    "clipiqa": {
+      "source_result": "results/strong-baselines/pyiqa-audit-clipiqa.json",
+      "full": {"auc": 0.70868224, "auc_ci95": [0.688509648, 0.729812864]},
+      "severe": {"auc": 0.615576, "auc_ci95": [0.5813242, 0.6509938]},
+      "mild": {"auc": 0.734376, "auc_ci95": [0.7021189, 0.7645315]}
+    }
+  },
+  "interpretation": "These are held-out row-level scalar-baseline AUCs under the IQA-SSC detector protocol. They do not measure energy-matched pair reversal rates and do not establish superiority over the active detector. MANIQA's single-crop setting is an explicitly labeled compute-bounded adaptation."
+}

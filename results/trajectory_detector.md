@@ -38,3 +38,14 @@ Status: `computed`
 
 Primary detector gate: **PASS**
 
+## Equal-image-weight sensitivity
+
+The five base-condition vectors were averaged within each image before fitting and evaluating the same ridge-regularized linear discriminant. This is a sensitivity analysis; the condition-row estimand above remains primary.
+
+| Comparison | Images per class | Row-level AUC | Image-level AUC | Image-level 95% CI | Difference |
+|---|---:|---:|---:|---|---:|
+| bilateral_vs_jpeg | 250 | 0.996111 | 0.996128 | [0.988240, 1.000000] | +0.000017 |
+| bilateral_vs_blur | 250 | 0.965181 | 0.997696 | [0.995184, 0.999376] | +0.032515 |
+
+The blur difference is reported as an estimand sensitivity and is not used to replace the primary row-level result.
+

@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "protocol_id": "iqa-ssc-energy-matched-v1",
+  "selective_label_source": "bilateral_transform_family",
+  "relabel_by_kappa": false,
+  "independence_unit": "image_id",
+  "calibration_images": 250,
+  "evaluation_images": 250,
+  "base_condition_count": 15,
+  "global_loss_tolerance": 0.05,
+  "wavelet": {
+    "family": "Daubechies-4",
+    "levels": 2,
+    "patch_size": 16,
+    "energy": "mean_nonnegative_high_frequency_energy_over_valid_patches"
+  },
+  "selectivity": {
+    "delta_skin": "1 - E_skin(I,T) / E_skin(I,original)",
+    "delta_nonskin": "1 - E_nonskin(I,T) / E_nonskin(I,original)",
+    "delta_global": "1 - E_global(I,T) / E_global(I,original)",
+    "kappa": "delta_skin - delta_nonskin",
+    "skin_label": 1,
+    "invalid_region_policy": "retain_invalid_and_exclude_from_family_summary",
+    "mechanism_role": "diagnostic_only"
+  },
+  "transform_grid": {
+    "bilateral": {
+      "implementation": "opencv.bilateralFilter",
+      "diameter": 9,
+      "sigma_space": [10, 25, 50, 75, 100],
+      "sigma_range_rgb_normalized": [0.1, 0.15, 0.2, 0.25, 0.3]
+    },
+    "jpeg_quality": [10, 20, 30, 40, 50],
+    "gaussian_blur_sigma": [1, 2, 3, 4, 5],
+    "probe_families": ["jpeg", "gaussian_blur"],
+    "probe_count_per_image": 10
+  },
+  "pairing": {
+    "eligible_when": "abs(delta_global_a - delta_global_b) <= 0.05 and both rows valid",
+    "control_reuse": "one_use",
+    "tie_break": ["image_id", "condition_index"],
+    "audit_label": "bilateral_is_selective_intervention; jpeg_or_blur_is_control"
+  },
+  "statistics": {
+    "bootstrap_resamples": 2000,
+    "bootstrap_unit": "image_id",
+    "primary_detector_fit": "condition_rows_with_image_cluster_uncertainty",
+    "sensitivity_fit": "mean_five_condition_vectors_per_image",
+    "ridge": "1e-3 * trace(C) / 12",
+    "severe_stratum_role": "diagnostic_only"
+  },
+  "tier_c_cross_content": {
+    "status": "not_run",
+    "required_preflight": ["legal_input_provenance", "frozen_mask_generator", "90_percent_valid_pilot", "mask_area_bounds"],
+    "failure_status": "blocked_cross_content_mask",
+    "retraining": false
+  }
+}
